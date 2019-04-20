@@ -1,41 +1,18 @@
 {
   "name": "react-native-midtrans",
-  "version": "0.0.3",
-  "author": "Ega Radiegtya. (Originally Developed by my team @mucasali)",
-  "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
-  },
+  "version": "0.5.0",
+  "description": "this module for MidTrans Payment Gateway",
   "keywords": [
-   "react-native",
-   "react-component",
-   "react-native-component",
-   "react",
-   "mobile",
-   "android",
-   "midtrans",
-   "sdk",
-   "payment",
-   "gateway",
-   "credit-card",
-   "debit",
-   "bank"
- ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/radiegtya/react-native-midtrans"
-  },
-  "dependencies": {
-    "react": "15.4.2",
-    "react-native": "0.42.3"
-  },
-  "devDependencies": {
-    "babel-jest": "19.0.0",
-    "babel-preset-react-native": "1.9.1",
-    "jest": "19.0.2",
-    "react-test-renderer": "15.4.2"
-  },
-  "jest": {
-    "preset": "react-native"
+    "react-native",
+    "midtrans",
+    "payment",
+    "gateway",
+    "payment gateway"
+  ],
+  "author": "Garry Priambudi",
+  "license": "MIT",
+  "peerDependencies": {
+    "react-native": "0.57.7",
+    "react-native-windows": "0.57.0-rc.0"
   }
 }

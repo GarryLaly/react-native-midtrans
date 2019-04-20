@@ -1,7 +1,5 @@
 package com.paymentproject.midtrans;
 
-import android.app.Activity;
-
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.JavaScriptModule;
 import com.facebook.react.bridge.NativeModule;
@@ -13,12 +11,8 @@ import java.util.Collections;
 import java.util.List;
 
 public class MidtransPackage implements ReactPackage{
-
-    private Activity mActivity = null;
-
-
-    @Override
-    public List<Class<? extends JavaScriptModule>> createJSModules(){
+    // Deprecated from RN 0.47
+    public List<Class<? extends JavaScriptModule>> createJSModules() {
       return Collections.emptyList();
     }
 
@@ -33,5 +27,4 @@ public class MidtransPackage implements ReactPackage{
       modules.add(new PaymentMidtrans(reactContext));
       return modules;
     }
-
 }
