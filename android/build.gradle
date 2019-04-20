@@ -1,36 +1,51 @@
-apply plugin: "com.android.library"
+buildscript {
+    repositories {
+        jcenter()
+        google()
+    }
 
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.0'
+    }
+}
+
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    buildToolsVersion "27.0.1"
 
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
-
+    }
+    lintOptions {
+        abortOnError false
     }
 }
+
 repositories {
     jcenter()
+    google()
     // Add the midtrans repository into the list of repositories
     maven { url "http://dl.bintray.com/pt-midtrans/maven" }
+    maven { url "https://jitpack.io" }
 }
+
 dependencies {
     // For using the Veritrans Sandbox
-    compile 'com.midtrans:corekit:1.4.1-SANDBOX'
-//     For using the Veritrans Production
-//    compile 'com.midtrans:corekit:1.4.2'
-    // For using the Veritrans Sandbox
-    compile 'com.midtrans:uikit:1.4.1-SANDBOX'
+    api 'com.midtrans:corekit:1.20.0-SANDBOX'
+
     // For using the Veritrans Production
-//    compile 'com.midtrans:uikit:1.4.2'
-    // Sandbox
-//    compile 'com.midtrans:widgets:1.5.1-SANDBOX'
-    // Production
-//    compile 'com.midtrans:widgets:1.5.1'
-//    testCompile 'junit:junit:4.12'
-    compile "com.facebook.react:react-native:+"  // From node_modules
+    // compile 'com.midtrans:corekit:1.20.0'
+
+    // For using the Midtrans Sandbox
+    api 'com.midtrans:uikit:1.20.0-SANDBOX' // change the number to the latest version
+
+    // For using the Midtrans Production
+    //compile 'com.midtrans:uikit:1.20.0' // change the number to the latest version
+
+    api 'com.facebook.react:react-native:+'
 }
