@@ -173,10 +173,10 @@ public class PaymentMidtrans extends ReactContextBaseJavaModule {
         MidtransSDK.getInstance().setTransactionRequest(transactionRequest);
 
         if (transRequest.getString("snapToken").equals("")) {
-            Toast.makeText(getCurrentActivity(), "Without Snap Token", Toast.LENGTH_LONG).show();
+            // Toast.makeText(getCurrentActivity(), "Without Snap Token", Toast.LENGTH_LONG).show();
             MidtransSDK.getInstance().startPaymentUiFlow(getCurrentActivity());
         }else {
-            Toast.makeText(getCurrentActivity(), "Snap Token: " + transRequest.getString("snapToken"), Toast.LENGTH_LONG).show();
+            // Toast.makeText(getCurrentActivity(), "Snap Token: " + transRequest.getString("snapToken"), Toast.LENGTH_LONG).show();
             MidtransSDK.getInstance().startPaymentUiFlow(getCurrentActivity(), transRequest.getString("snapToken"));
         }
     }
